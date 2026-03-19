@@ -34,7 +34,7 @@ public class APITest {
     @Test
     void verifyApiCallHasCorrectHeadersAndParameters() {
 
-        // Capture the factorial API request
+      
         AtomicReference<Request> apiRequest = new AtomicReference<>();
         page.onRequest(request -> {
             if (request.url().contains("/factorial")) {
@@ -42,7 +42,7 @@ public class APITest {
             }
         });
 
-        // Enter number and click calculate
+     
         page.getByPlaceholder("Enter an integer").fill("12");
         page.locator("#getFactorial").click();
 
